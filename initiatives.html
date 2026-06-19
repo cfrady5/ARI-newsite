@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>document.documentElement.className += " js";</script>
+  <title>Programs &amp; Initiatives | Applied Research Institute (ARI)</title>
+  <meta name="description" content="Explore the programs and initiatives ARI builds and operates—from the Rapid Acquisition Marketplace and Heartland BioWorks to Silicon Crossroads—connecting mission needs with emerging capabilities and the right partners." />
+  <link rel="canonical" href="https://www.theari.us/initiatives.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Applied Research Institute" />
+  <meta property="og:title" content="Programs &amp; Initiatives — ARI" />
+  <meta property="og:description" content="The platforms powering national and regional innovation. Explore the programs ARI builds and operates to move mission needs to fielded capability." />
+  <meta property="og:url" content="https://www.theari.us/initiatives.html" />
+  <meta property="og:image" content="https://www.theari.us/assets/img/og-default.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Programs &amp; Initiatives — ARI" />
+  <meta name="twitter:description" content="The platforms powering national and regional innovation. Explore the programs ARI builds and operates." />
+  <meta name="twitter:image" content="https://www.theari.us/assets/img/og-default.svg" />
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#1F3655" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Page-specific styles (filter bar) scoped under .init-filter -->
+  <style>
+    .init-filter { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; }
+    .init-filter__chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .init-filter .chip {
+      display: inline-flex; align-items: center;
+      padding: .5rem 1rem; border-radius: var(--radius-pill);
+      font-size: .85rem; font-weight: 700; letter-spacing: .01em;
+      background: transparent; color: var(--c-navy);
+      border: 1px solid var(--c-line); cursor: pointer;
+      transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+    }
+    .init-filter .chip:hover { border-color: var(--c-green); color: var(--c-green-600); }
+    .init-filter .chip.is-active { background: var(--c-green-600); color: #fff; border-color: var(--c-green-600); }
+    .init-filter__search { position: relative; flex: 1 1 240px; max-width: 320px; }
+    .init-filter__search input {
+      width: 100%; padding: .7rem 1rem; border: 1px solid var(--c-line); border-radius: var(--radius-pill);
+      background: #fff; color: var(--c-ink); transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+    }
+    .init-filter__search input:focus { outline: none; border-color: var(--c-green); box-shadow: 0 0 0 3px rgba(59,174,72,.18); }
+    .init-empty { display: none; text-align: center; padding: 2rem 0; color: var(--c-grey); font-weight: 600; }
+    .init-empty.is-shown { display: block; }
+    .init-card.is-hidden { display: none; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html" aria-label="ARI — Applied Research Institute, home">
+        <span class="logo-mark">ARI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li class="has-mega">
+            <a class="nav-link" href="/initiatives.html" aria-haspopup="true">
+              Initiatives
+              <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="mega" role="menu" aria-label="Initiatives">
+              <div class="mega-grid">
+                <a class="mega-item" href="/initiatives.html#ram" role="menuitem"><strong>Rapid Acquisition Marketplace</strong><span>From engagement to awardable outcomes</span></a>
+                <a class="mega-item" href="/initiatives.html#heartland-bioworks" role="menuitem"><strong>Heartland BioWorks</strong><span>Biomanufacturing workforce &amp; ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#silicon-crossroads" role="menuitem"><strong>Silicon Crossroads</strong><span>Microelectronics industrial base</span></a>
+                <a class="mega-item" href="/initiatives.html#mdis" role="menuitem"><strong>Midwest Defense Innovation Summit</strong><span>Convening the defense ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#tradewinds" role="menuitem"><strong>Tradewinds</strong><span>Pathway into the CDAO ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html" role="menuitem"><strong>All initiatives →</strong><span>Browse the full program portfolio</span></a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-link" href="/markets.html">Markets &amp; Capabilities</a></li>
+          <li><a class="nav-link" href="/impact.html">Impact</a></li>
+          <li><a class="nav-link" href="/insights.html">Insights</a></li>
+          <li><a class="nav-link" href="/events.html">Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn--primary nav-cta" href="/contact.html">Partner With ARI</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero hero--page">
+      <div class="container">
+        <div class="hero__inner">
+          <div>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><span>/</span> Initiatives</nav>
+            <span class="eyebrow mt-4">Programs &amp; Initiatives</span>
+            <h1>The platforms powering national and regional innovation.</h1>
+            <p class="lede">ARI builds and operates the initiatives that connect mission needs with emerging capabilities, regional strengths, and the right partners—combining academic depth with entrepreneurial urgency.</p>
+            <div class="btn-row">
+              <a class="btn btn--accent btn--lg" href="#list">View initiatives</a>
+              <a class="btn btn--on-dark btn--lg" href="/contact.html">Partner With ARI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FILTER BAR ===================== -->
+    <section class="section section--tight" id="list">
+      <div class="container">
+        <div class="init-filter reveal" role="search">
+          <nav class="init-filter__chips" aria-label="Filter initiatives by category">
+            <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter="acquisition" aria-pressed="false">Acquisition &amp; Transition</button>
+            <button type="button" class="chip" data-filter="defense" aria-pressed="false">Defense Innovation</button>
+            <button type="button" class="chip" data-filter="biotech" aria-pressed="false">Biotechnology</button>
+            <button type="button" class="chip" data-filter="microelectronics" aria-pressed="false">Microelectronics</button>
+            <button type="button" class="chip" data-filter="ai" aria-pressed="false">AI &amp; Digital</button>
+            <button type="button" class="chip" data-filter="events" aria-pressed="false">Convening &amp; Events</button>
+            <button type="button" class="chip" data-filter="workforce" aria-pressed="false">Workforce</button>
+          </nav>
+          <div class="init-filter__search">
+            <label for="init-search" class="muted" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">Search initiatives</label>
+            <input id="init-search" type="search" placeholder="Search initiatives…" autocomplete="off" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INITIATIVE CARDS GRID ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid-3" id="init-grid">
+
+          <!-- RAM -->
+          <article class="card init-card reveal" id="ram" data-category="acquisition">
+            <div class="init-card__media"><span class="glyph">RAM</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Acquisition &amp; Transition</span></div>
+              <h3 class="mt-2">Rapid Acquisition Marketplace (RAM)</h3>
+              <p>Moves technology from engagement to awardable outcomes. RAM powers how agencies identify, evaluate, and acquire emerging capabilities in one transparent, data-driven environment—reducing friction at every step.</p>
+              <div class="init-card__meta">
+                <span class="status-dot status-dot--ext">External site</span>
+                <a class="link-arrow" href="https://www.theari.us" rel="noopener">Visit RAM <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- MDIS -->
+          <article class="card init-card reveal" id="mdis" data-category="events">
+            <div class="init-card__media"><span class="glyph">MDIS</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Convening &amp; Events</span></div>
+              <h3 class="mt-2">Midwest Defense Innovation Summit (MDIS)</h3>
+              <p>Convenes government, industry, and academia to accelerate defense innovation and deliver mission-ready capabilities from the Midwest.</p>
+              <div class="init-card__meta">
+                <span class="status-dot status-dot--soon">Annual</span>
+                <a class="link-arrow" href="/events.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- IRC -->
+          <article class="card init-card reveal" id="irc" data-category="ai">
+            <div class="init-card__media"><span class="glyph">IRC</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">AI &amp; Digital</span></div>
+              <h3 class="mt-2">Indiana Research Consortium (IRC)</h3>
+              <p>Convenes researchers from Purdue University, Indiana University, and Notre Dame into cross-university teams that tackle mission-driven challenges.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/contact.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Heartland BioWorks -->
+          <article class="card init-card reveal" id="heartland-bioworks" data-category="biotech">
+            <div class="init-card__media"><span class="glyph">Heartland BioWorks</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Biotechnology</span></div>
+              <h3 class="mt-2">Heartland BioWorks</h3>
+              <p>Builds the nation's biomanufacturing workforce and innovation ecosystem, anchored by a new training and innovation headquarters in Indianapolis.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/insights/heartland-bioworks-headquarters.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Silicon Crossroads -->
+          <article class="card init-card reveal" id="silicon-crossroads" data-category="microelectronics">
+            <div class="init-card__media"><span class="glyph">Silicon Crossroads</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Microelectronics</span></div>
+              <h3 class="mt-2">Silicon Crossroads (Microelectronics Commons)</h3>
+              <p>Strengthens the microelectronics industrial base for national resilience as one of the nation's Microelectronics Commons hubs.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/markets.html#microelectronics">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- DARPAConnect -->
+          <article class="card init-card reveal" id="darpaconnect" data-category="defense">
+            <div class="init-card__media"><span class="glyph">DARPAConnect</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Defense Innovation</span></div>
+              <h3 class="mt-2">DARPAConnect</h3>
+              <p>Connects innovators to DARPA opportunities and national challenges, demystifying how to work with the agency.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/contact.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tradewinds -->
+          <article class="card init-card reveal" id="tradewinds" data-category="ai">
+            <div class="init-card__media"><span class="glyph">Tradewinds</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">AI &amp; Digital</span></div>
+              <h3 class="mt-2">Tradewinds</h3>
+              <p>Connects innovators to the CDAO ecosystem and cutting-edge AI and digital technology opportunities across the Department of Defense.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/contact.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SciTechCONNECT -->
+          <article class="card init-card reveal" id="scitechconnect" data-category="workforce">
+            <div class="init-card__media"><span class="glyph">SciTechCONNECT</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">Workforce</span></div>
+              <h3 class="mt-2">SciTechCONNECT</h3>
+              <p>Empowers innovators with the resources, mentorship, and connections to turn groundbreaking ideas into real-world solutions.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/contact.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platform One / Marketplace One -->
+          <article class="card init-card reveal" id="platform-one" data-category="ai">
+            <div class="init-card__media"><span class="glyph">Platform One</span></div>
+            <div class="init-card__body">
+              <div class="tag-row"><span class="tag">AI &amp; Digital</span></div>
+              <h3 class="mt-2">Platform One / Marketplace One</h3>
+              <p>A software and digital acquisition initiative that streamlines how modern software capabilities are evaluated and adopted.</p>
+              <div class="init-card__meta">
+                <span class="status-dot">Active</span>
+                <a class="link-arrow" href="/contact.html">Learn more <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="init-empty" id="init-empty" role="status">No initiatives match your search. Try a different keyword or category.</p>
+      </div>
+    </section>
+
+    <!-- ===================== HOW ARI BUILDS INITIATIVES ===================== -->
+    <section class="section section--mist">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Process</span>
+          <h2>How ARI builds and operates initiatives</h2>
+          <p>Every initiative follows the same disciplined arc—from understanding the mission to scaling the impact—so good ideas don't stall on the way to delivery.</p>
+        </div>
+        <div class="grid grid-3 steps reveal">
+          <div class="step">
+            <h4>Identify mission needs</h4>
+            <p>We start with the agency, regional, and industry priorities that define what success must look like.</p>
+          </div>
+          <div class="step">
+            <h4>Align the right partners</h4>
+            <p>As a neutral convener, we bring government, industry, and academia to the same table around shared outcomes.</p>
+          </div>
+          <div class="step">
+            <h4>Structure the program</h4>
+            <p>We design the governance, funding, and mechanisms required to turn intent into an executable program.</p>
+          </div>
+          <div class="step">
+            <h4>Launch the pathway</h4>
+            <p>We stand up and operate the marketplace, consortium, or event that moves work from idea to award.</p>
+          </div>
+          <div class="step">
+            <h4>Measure and scale impact</h4>
+            <p>We track outcomes—jobs, awards, capabilities transitioned—and grow what works into national-scale impact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Have an initiative idea or a capability to bring forward?</h2>
+          <p>Whether you represent a government program, a company with a breakthrough, or a university with research to transition—ARI can help you find the fastest path to impact.</p>
+          <div class="btn-row btn-row--center">
+            <a class="btn btn--accent btn--lg" href="/contact.html">Start a conversation</a>
+            <a class="btn btn--on-dark btn--lg" href="/markets.html">Explore markets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">ARI</span>
+          <p>The Applied Research Institute unites government, industry, and academia to accelerate mission-driven innovation. Rooted in Indiana, trusted across the nation.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ari" aria-label="ARI on X" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/applied-research-institute" aria-label="ARI on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.59 21 11.1 21 14.16V21h-4v-6.06c0-1.45-.03-3.3-2-3.3-2 0-2.31 1.57-2.31 3.2V21H9z"/></svg></a>
+            <a href="https://www.youtube.com/@ari" aria-label="ARI on YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about.html">About</a>
+          <a href="/initiatives.html">Initiatives</a>
+          <a href="/markets.html">Markets &amp; Capabilities</a>
+          <a href="/impact.html">Impact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Engage</h4>
+          <a href="/insights.html">Insights</a>
+          <a href="/events.html">Events</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/contact.html#partner">Partner With ARI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://maps.google.com/?q=16+Tech+Innovation+District+Indianapolis" rel="noopener">16 Tech Innovation District<br />Indianapolis, Indiana</a>
+          <a href="mailto:info@theari.us">info@theari.us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Applied Research Institute. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <a href="/policies/privacy.html">Privacy Policy</a>
+          <a href="/policies/cookie.html">Cookie Policy</a>
+          <a href="/policies/terms.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+
+  <!-- Page-specific: client-side filtering for the initiatives list -->
+  <script>
+    (function () {
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.init-filter .chip'));
+      var search = document.getElementById('init-search');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#init-grid .init-card'));
+      var empty = document.getElementById('init-empty');
+      if (!cards.length) return;
+
+      var activeFilter = 'all';
+
+      function apply() {
+        var q = (search && search.value || '').trim().toLowerCase();
+        var visible = 0;
+        cards.forEach(function (card) {
+          var matchesCat = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
+          var text = card.textContent.toLowerCase();
+          var matchesText = !q || text.indexOf(q) !== -1;
+          var show = matchesCat && matchesText;
+          card.classList.toggle('is-hidden', !show);
+          if (show) visible++;
+        });
+        if (empty) empty.classList.toggle('is-shown', visible === 0);
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) {
+            c.classList.remove('is-active');
+            c.setAttribute('aria-pressed', 'false');
+          });
+          chip.classList.add('is-active');
+          chip.setAttribute('aria-pressed', 'true');
+          activeFilter = chip.getAttribute('data-filter') || 'all';
+          apply();
+        });
+      });
+
+      if (search) search.addEventListener('input', apply);
+    })();
+  </script>
+</body>
+</html>

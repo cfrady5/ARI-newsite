@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>document.documentElement.className += " js";</script>
+  <title>Press &amp; Insights | News &amp; Analysis — Applied Research Institute</title>
+  <meta name="description" content="Press releases, opinion, case studies, and reports from the ARI network—news, announcements, and analysis shaped by government, industry, and academia." />
+  <link rel="canonical" href="https://www.theari.us/insights.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Applied Research Institute" />
+  <meta property="og:title" content="Press &amp; Insights — ARI" />
+  <meta property="og:description" content="News, announcements, and analysis from the ARI network—press releases, opinion, case studies, and reports." />
+  <meta property="og:url" content="https://www.theari.us/insights.html" />
+  <meta property="og:image" content="https://www.theari.us/assets/img/og-default.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Press &amp; Insights — ARI" />
+  <meta name="twitter:description" content="News, announcements, and analysis from the ARI network." />
+  <meta name="twitter:image" content="https://www.theari.us/assets/img/og-default.svg" />
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#1F3655" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    /* Scoped: category filter chips for the insights index */
+    .chip-row { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: clamp(1.6rem, 3vw, 2.4rem); }
+    .chip {
+      display: inline-flex; align-items: center;
+      padding: .5rem 1.05rem; border-radius: var(--radius-pill);
+      font-weight: 700; font-size: .9rem; letter-spacing: .01em;
+      background: transparent; color: var(--c-navy); border: 1px solid var(--c-line);
+      cursor: pointer; transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+    }
+    .chip:hover { border-color: var(--c-green); color: var(--c-green-600); }
+    .chip[aria-pressed="true"] { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
+    .article-card.is-hidden { display: none; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html" aria-label="ARI — Applied Research Institute, home">
+        <span class="logo-mark">ARI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li class="has-mega">
+            <a class="nav-link" href="/initiatives.html" aria-haspopup="true">
+              Initiatives
+              <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="mega" role="menu" aria-label="Initiatives">
+              <div class="mega-grid">
+                <a class="mega-item" href="/initiatives.html#ram" role="menuitem"><strong>Rapid Acquisition Marketplace</strong><span>From engagement to awardable outcomes</span></a>
+                <a class="mega-item" href="/initiatives.html#heartland-bioworks" role="menuitem"><strong>Heartland BioWorks</strong><span>Biomanufacturing workforce &amp; ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#silicon-crossroads" role="menuitem"><strong>Silicon Crossroads</strong><span>Microelectronics industrial base</span></a>
+                <a class="mega-item" href="/initiatives.html#mdis" role="menuitem"><strong>Midwest Defense Innovation Summit</strong><span>Convening the defense ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#tradewinds" role="menuitem"><strong>Tradewinds</strong><span>Pathway into the CDAO ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html" role="menuitem"><strong>All initiatives →</strong><span>Browse the full program portfolio</span></a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-link" href="/markets.html">Markets &amp; Capabilities</a></li>
+          <li><a class="nav-link" href="/impact.html">Impact</a></li>
+          <li><a class="nav-link" href="/insights.html">Insights</a></li>
+          <li><a class="nav-link" href="/events.html">Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn--primary nav-cta" href="/contact.html">Partner With ARI</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero hero--page">
+      <div class="container">
+        <div class="hero__inner">
+          <div>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><span>/</span> Insights</nav>
+            <span class="eyebrow mt-4">Press &amp; Insights</span>
+            <h1>News, announcements, and analysis from the ARI network.</h1>
+            <p class="lede">Featuring news, announcements, and coverage shaped by our expansive network.</p>
+            <div class="btn-row">
+              <a class="btn btn--accent btn--lg" href="#subscribe">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ARTICLE INDEX ===================== -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Category chips -->
+        <div class="chip-row reveal" role="group" aria-label="Filter insights by category">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="Press Releases" aria-pressed="false">Press Releases</button>
+          <button type="button" class="chip" data-filter="Opinion" aria-pressed="false">Opinion</button>
+          <button type="button" class="chip" data-filter="Case Studies" aria-pressed="false">Case Studies</button>
+          <button type="button" class="chip" data-filter="Reports" aria-pressed="false">Reports</button>
+          <button type="button" class="chip" data-filter="In the Media" aria-pressed="false">In the Media</button>
+        </div>
+
+        <!-- Featured article -->
+        <article class="feature-article reveal">
+          <div class="feature-article__media">
+            <span class="tag" style="position:absolute;left:1.2rem;top:1.2rem;background:rgba(255,255,255,.92);color:var(--c-navy);">Press Release</span>
+          </div>
+          <div class="feature-article__body">
+            <span class="eyebrow">Featured</span>
+            <div class="article-card__meta mt-2"><span>November 12, 2025</span><span>·</span><span>4 min read</span></div>
+            <h2><a href="/insights/ari-affirms-acquisition-transformation-memorandum.html" style="color:var(--c-navy);">ARI Affirms Alignment with the Secretary of War's Acquisition Transformation Memorandum</a></h2>
+            <p>ARI's Rapid Acquisition Marketplace directly advances the Secretary's call to transform the warfighting acquisition system. RAM brings competition, evaluation, and award into one transparent, data-driven environment built for speed.</p>
+            <a class="link-arrow mt-2" href="/insights/ari-affirms-acquisition-transformation-memorandum.html">Read the announcement
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article grid -->
+        <div class="grid grid-3 mt-6" id="article-grid">
+
+          <article class="card article-card reveal" data-category="Press Releases Case Studies">
+            <div class="article-card__media"><span class="tag">Press Release</span></div>
+            <div class="article-card__body">
+              <div class="article-card__meta"><span>October 27, 2025</span><span>·</span><span>5 min read</span></div>
+              <h3><a href="/insights/heartland-bioworks-headquarters.html">ARI Announces Workforce Training and Innovation Headquarters for Heartland BioWorks</a></h3>
+              <p>ARI will open a 20,000-square-foot workforce training and innovation headquarters for Heartland BioWorks in Indianapolis's 16 Tech Innovation District.</p>
+              <a class="link-arrow" href="/insights/heartland-bioworks-headquarters.html">Read more
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card article-card reveal" data-category="Press Releases">
+            <div class="article-card__media"><span class="tag">Press Release</span></div>
+            <div class="article-card__body">
+              <div class="article-card__meta"><span>September 19, 2025</span><span>·</span><span>4 min read</span></div>
+              <h3><a href="/insights/andrew-kossack-ceo.html">ARI Promotes Andrew Kossack to Chief Executive Officer</a></h3>
+              <p>ARI promotes Andrew Kossack to Chief Executive Officer, capping a period of rapid growth in federal tech-hub designations and major agreements.</p>
+              <a class="link-arrow" href="/insights/andrew-kossack-ceo.html">Read more
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card article-card reveal" data-category="Reports">
+            <div class="article-card__media"><span class="tag">Reports</span></div>
+            <div class="article-card__body">
+              <div class="article-card__meta"><span>June 15, 2025</span><span>·</span><span>6 min read</span></div>
+              <h3><a href="/insights/midwest-tech-hubs-economic-growth.html">ARI's Midwest Tech Hubs Positioned to Support $8.5 Billion in Economic Growth by 2035</a></h3>
+              <p>An independent study projects ARI's Indiana innovation programs will support over $8.5 billion in economic growth over the next decade.</p>
+              <a class="link-arrow" href="/insights/midwest-tech-hubs-economic-growth.html">Read more
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card article-card reveal" data-category="Press Releases">
+            <div class="article-card__media"><span class="tag">Press Release</span></div>
+            <div class="article-card__body">
+              <div class="article-card__meta"><span>April 1, 2025</span><span>·</span><span>6 min read</span></div>
+              <h3><a href="/insights/ram-prototype-followon-awards.html">ARI Announces Successful Prototype and Availability of Noncompetitive Follow-on Awards</a></h3>
+              <p>ARI delivered a prototype Acquisition Business Model for the DoD CDAO, with an average 51-day procurement lead time and $259.58M in awards.</p>
+              <a class="link-arrow" href="/insights/ram-prototype-followon-awards.html">Read more
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <p class="muted mt-6" id="filter-empty" hidden>No insights in this category yet. Check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER ===================== -->
+    <section class="section section--mist" id="subscribe">
+      <div class="container">
+        <div class="newsletter reveal">
+          <div class="grid grid-2" style="align-items:center;gap:2.5rem;">
+            <div>
+              <span class="eyebrow">From Ideas to Impact</span>
+              <h2 style="color:#fff;">Get the ARI Research &amp; Innovation Report</h2>
+              <p class="lede" style="color:var(--c-on-dark);">Periodic briefings on national-security innovation, funding opportunities, event invitations, and program milestones—straight to your inbox.</p>
+            </div>
+            <form class="form" data-demo aria-label="Newsletter signup">
+              <div class="form-row">
+                <div class="field"><label for="nl-name">Name</label><input id="nl-name" name="name" type="text" autocomplete="name" required /></div>
+                <div class="field"><label for="nl-org">Organization</label><input id="nl-org" name="organization" type="text" autocomplete="organization" /></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="nl-email">Email <span class="req">*</span></label><input id="nl-email" name="email" type="email" autocomplete="email" required /></div>
+                <div class="field"><label for="nl-zip">ZIP code</label><input id="nl-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" /></div>
+              </div>
+              <button class="btn btn--accent btn--block" type="submit">Subscribe</button>
+              <p class="form-note" style="color:var(--c-on-dark-soft);">We respect your privacy. Unsubscribe anytime. See our <a href="/policies/privacy.html" style="color:#fff;text-decoration:underline;">Privacy Policy</a>.</p>
+              <p class="form-status" data-msg="Thanks for subscribing — watch your inbox for the next ARI Research & Innovation Report." role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Media or partnership inquiry?</h2>
+          <p>Reach ARI Communications for press, interviews, and background—or start a conversation about a mission, challenge, or capability ready to move.</p>
+          <div class="btn-row btn-row--center">
+            <a class="btn btn--accent btn--lg" href="/contact.html">Contact ARI</a>
+            <a class="btn btn--on-dark btn--lg" href="/contact.html#partner">Partner With ARI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">ARI</span>
+          <p>The Applied Research Institute unites government, industry, and academia to accelerate mission-driven innovation. Rooted in Indiana, trusted across the nation.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ari" aria-label="ARI on X" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/applied-research-institute" aria-label="ARI on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.59 21 11.1 21 14.16V21h-4v-6.06c0-1.45-.03-3.3-2-3.3-2 0-2.31 1.57-2.31 3.2V21H9z"/></svg></a>
+            <a href="https://www.youtube.com/@ari" aria-label="ARI on YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about.html">About</a>
+          <a href="/initiatives.html">Initiatives</a>
+          <a href="/markets.html">Markets &amp; Capabilities</a>
+          <a href="/impact.html">Impact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Engage</h4>
+          <a href="/insights.html">Insights</a>
+          <a href="/events.html">Events</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/contact.html#partner">Partner With ARI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://maps.google.com/?q=16+Tech+Innovation+District+Indianapolis" rel="noopener">16 Tech Innovation District<br />Indianapolis, Indiana</a>
+          <a href="mailto:info@theari.us">info@theari.us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Applied Research Institute. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <a href="/policies/privacy.html">Privacy Policy</a>
+          <a href="/policies/cookie.html">Cookie Policy</a>
+          <a href="/policies/terms.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script>
+    /* Progressive-enhancement category filter. All cards visible without JS. */
+    (function () {
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#article-grid .article-card'));
+      var empty = document.getElementById('filter-empty');
+      if (!chips.length || !cards.length) return;
+
+      function apply(filter) {
+        var shown = 0;
+        cards.forEach(function (card) {
+          var cats = (card.getAttribute('data-category') || '').split(/\s+/);
+          var match = filter === 'all' || cats.indexOf(filter) !== -1;
+          card.classList.toggle('is-hidden', !match);
+          if (match) shown++;
+        });
+        if (empty) empty.hidden = shown !== 0;
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+          chip.setAttribute('aria-pressed', 'true');
+          apply(chip.getAttribute('data-filter'));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

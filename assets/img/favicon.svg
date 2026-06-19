@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ARI">
+  <rect width="64" height="64" rx="13" fill="#1F3655"/>
+  <text x="32" y="34" text-anchor="middle" dominant-baseline="central"
+        font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="30"
+        font-weight="800" font-style="italic" letter-spacing="-1.5" fill="#3BAE48">ARI</text>
+  <rect x="14" y="46" width="36" height="3.4" rx="1.7" fill="#007941"/>
+</svg>

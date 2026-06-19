@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>document.documentElement.className += " js";</script>
+  <title>Events | Where the Ecosystem Convenes — Applied Research Institute</title>
+  <meta name="description" content="ARI events connect the companies, leaders, and innovators who move the industry forward—built on the strength of our expansive partner network across government, industry, and academia." />
+  <link rel="canonical" href="https://www.theari.us/events.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Applied Research Institute" />
+  <meta property="og:title" content="ARI Events — Where the Ecosystem Convenes" />
+  <meta property="og:description" content="Built on our expansive partner network, ARI events connect the companies, leaders, and innovators who move the industry forward." />
+  <meta property="og:url" content="https://www.theari.us/events.html" />
+  <meta property="og:image" content="https://www.theari.us/assets/img/og-default.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ARI Events — Where the Ecosystem Convenes" />
+  <meta name="twitter:description" content="ARI events connect the companies, leaders, and innovators who move the industry forward." />
+  <meta name="twitter:image" content="https://www.theari.us/assets/img/og-default.svg" />
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#1F3655" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Page-scoped styles: events filter chips + list polish (reuses tokens/classes) -->
+  <style>
+    .events-toolbar { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: flex-start; justify-content: space-between; margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+    .filter-group { display: flex; flex-direction: column; gap: .5rem; }
+    .filter-group__label { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--c-grey); }
+    .chip-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .45rem .95rem; border-radius: var(--radius-pill);
+      font-size: .85rem; font-weight: 600; line-height: 1;
+      background: #fff; color: var(--c-navy); border: 1px solid var(--c-line);
+      transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+    }
+    .chip:hover { border-color: var(--c-green); color: var(--c-green-600); }
+    .chip[aria-pressed="true"] { background: var(--c-green-600); color: #fff; border-color: var(--c-green-600); }
+    .event-list { display: grid; gap: 1rem; }
+    .event { background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease); }
+    .event:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #cdd8e4; }
+    .event[hidden] { display: none; }
+    .event__cta { display: flex; align-items: center; }
+    .event__loc svg { width: 1em; height: 1em; flex: none; }
+    .event-feature__grid { display: grid; grid-template-columns: 1.4fr .9fr; gap: clamp(1.4rem, 3vw, 2.5rem); align-items: center; }
+    .event-feature__meta { display: grid; gap: .9rem; }
+    .event-feature__meta .row { display: flex; gap: .6rem; align-items: flex-start; color: var(--c-on-dark); font-size: .95rem; }
+    .event-feature__meta .row svg { width: 1.1em; height: 1.1em; flex: none; margin-top: .15rem; color: var(--c-green); }
+    .event-feature .tag { background: rgba(255,255,255,.16); color: #fff; }
+    .event-feature .tag-row .tag { background: rgba(255,255,255,.1); color: var(--c-on-dark); }
+    .note-callout { font-size: .85rem; color: var(--c-grey); background: var(--c-mist); border: 1px dashed var(--c-line); border-radius: var(--radius); padding: .8rem 1.1rem; }
+    @media (max-width: 860px) {
+      .event-feature__grid { grid-template-columns: 1fr; }
+      .events-toolbar { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+
+  <!-- Event schema (featured: Midwest Defense Innovation Summit) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Midwest Defense Innovation Summit (MDIS)",
+    "description": "ARI's flagship convening brings government, industry, and academia together to accelerate defense innovation and deliver mission-ready capabilities from the Midwest.",
+    "startDate": "2026-09-15T09:00:00-04:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Indianapolis, Indiana",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      }
+    },
+    "image": "https://www.theari.us/assets/img/og-default.svg",
+    "url": "https://www.theari.us/events.html",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Applied Research Institute",
+      "url": "https://www.theari.us/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html" aria-label="ARI — Applied Research Institute, home">
+        <span class="logo-mark">ARI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li class="has-mega">
+            <a class="nav-link" href="/initiatives.html" aria-haspopup="true">
+              Initiatives
+              <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="mega" role="menu" aria-label="Initiatives">
+              <div class="mega-grid">
+                <a class="mega-item" href="/initiatives.html#ram" role="menuitem"><strong>Rapid Acquisition Marketplace</strong><span>From engagement to awardable outcomes</span></a>
+                <a class="mega-item" href="/initiatives.html#heartland-bioworks" role="menuitem"><strong>Heartland BioWorks</strong><span>Biomanufacturing workforce &amp; ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#silicon-crossroads" role="menuitem"><strong>Silicon Crossroads</strong><span>Microelectronics industrial base</span></a>
+                <a class="mega-item" href="/initiatives.html#mdis" role="menuitem"><strong>Midwest Defense Innovation Summit</strong><span>Convening the defense ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html#tradewinds" role="menuitem"><strong>Tradewinds</strong><span>Pathway into the CDAO ecosystem</span></a>
+                <a class="mega-item" href="/initiatives.html" role="menuitem"><strong>All initiatives →</strong><span>Browse the full program portfolio</span></a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-link" href="/markets.html">Markets &amp; Capabilities</a></li>
+          <li><a class="nav-link" href="/impact.html">Impact</a></li>
+          <li><a class="nav-link" href="/insights.html">Insights</a></li>
+          <li><a class="nav-link" href="/events.html">Events</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn--primary nav-cta" href="/contact.html">Partner With ARI</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero hero--page">
+      <div class="container">
+        <div class="hero__inner">
+          <div>
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a><span>/</span> Events</nav>
+            <span class="eyebrow mt-4">Events</span>
+            <h1>Where the ecosystem convenes.</h1>
+            <p class="lede">Built on the strength of our expansive partner network, our events connect the companies, leaders, and innovators who move the industry forward.</p>
+            <div class="btn-row">
+              <a class="btn btn--accent btn--lg" href="#upcoming">See upcoming events</a>
+              <a class="btn btn--on-dark btn--lg" href="/contact.html">Host with ARI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED EVENT ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="event-feature reveal">
+          <div class="event-feature__grid">
+            <div>
+              <span class="tag">Flagship Summit</span>
+              <h2 class="mt-4" style="color:#fff;">Midwest Defense Innovation Summit (MDIS)</h2>
+              <p class="lede mt-4" style="color:var(--c-on-dark);">ARI's flagship convening brings government, industry, and academia together to accelerate defense innovation and deliver mission-ready capabilities from the Midwest.</p>
+              <div class="btn-row mt-6">
+                <a class="btn btn--accent btn--lg" href="/contact.html">Register interest</a>
+              </div>
+              <div class="tag-row mt-6">
+                <span class="tag">Government</span>
+                <span class="tag">Industry</span>
+                <span class="tag">Academia</span>
+              </div>
+            </div>
+            <div class="event-feature__meta">
+              <div class="row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <span><strong style="color:#fff;">Fall 2026</strong><br />Final dates to be announced</span>
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                <span><strong style="color:#fff;">Indianapolis, Indiana</strong><br />America/Indiana/Indianapolis (Eastern Time)</span>
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.4"/><path d="M3 19c0-3 2.7-4.5 6-4.5S15 16 15 19M14.5 15c2.6.1 5 1.4 5 4"/></svg>
+                <span>Government, industry, and academia convened around mission-ready capability.</span>
+              </div>
+              <p style="font-size:.82rem;color:var(--c-on-dark-soft);font-style:italic;">Final dates and venue details will be announced. Listing is illustrative.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UPCOMING EVENTS ===================== -->
+    <section class="section section--mist" id="upcoming">
+      <div class="container">
+        <div class="section-head reveal" style="max-width:760px;">
+          <span class="eyebrow">Calendar</span>
+          <h2>Upcoming events</h2>
+          <p>Workshops, briefings, and open houses tied to ARI's initiatives—connecting partners across government, industry, and academia.</p>
+        </div>
+
+        <!-- Filter chips (visual; progressively enhanced) -->
+        <div class="events-toolbar reveal" role="region" aria-label="Filter events">
+          <div class="filter-group">
+            <span class="filter-group__label" id="filter-when">When</span>
+            <div class="chip-row" role="group" aria-labelledby="filter-when" data-filter="when">
+              <button class="chip" type="button" data-value="upcoming" aria-pressed="true">Upcoming</button>
+              <button class="chip" type="button" data-value="past" aria-pressed="false">Past</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group__label" id="filter-audience">Audience</span>
+            <div class="chip-row" role="group" aria-labelledby="filter-audience" data-filter="audience">
+              <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-value="industry" aria-pressed="false">Industry</button>
+              <button class="chip" type="button" data-value="government" aria-pressed="false">Government</button>
+              <button class="chip" type="button" data-value="academia" aria-pressed="false">Academia</button>
+              <button class="chip" type="button" data-value="students" aria-pressed="false">Students</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group__label" id="filter-location">Location</span>
+            <div class="chip-row" role="group" aria-labelledby="filter-location" data-filter="location">
+              <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-value="virtual" aria-pressed="false">Virtual</button>
+              <button class="chip" type="button" data-value="midwest" aria-pressed="false">Midwest</button>
+              <button class="chip" type="button" data-value="national" aria-pressed="false">National</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="note-callout reveal" style="margin-bottom:1.5rem;">Note: Event listings below are illustrative placeholders. At launch they will be managed through the site CMS with live registration links.</p>
+
+        <div class="event-list reveal" id="event-list">
+
+          <!-- Event 1 -->
+          <article class="event" data-audience="government industry" data-location="virtual">
+            <div class="event__date">
+              <span class="m">Jul</span><span class="d">14</span><span class="y">2026</span>
+            </div>
+            <div class="event__body">
+              <h3>DARPAConnect Office Hours</h3>
+              <p>A live virtual webinar helping non-traditional innovators understand and engage DARPA programs and pathways.</p>
+              <div class="tag-row">
+                <span class="tag">Webinar</span>
+                <span class="tag tag--navy">Industry</span>
+                <span class="tag tag--grey">Government</span>
+              </div>
+            </div>
+            <div class="event__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Virtual
+            </div>
+            <div class="event__cta">
+              <a class="btn btn--accent" href="/contact.html">Register</a>
+            </div>
+          </article>
+
+          <!-- Event 2 -->
+          <article class="event" data-audience="students academia industry" data-location="midwest">
+            <div class="event__date">
+              <span class="m">Aug</span><span class="d">06</span><span class="y">2026</span>
+            </div>
+            <div class="event__body">
+              <h3>Heartland BioWorks Workforce Open House</h3>
+              <p>Tour the biomanufacturing training facilities and meet the partners building the Midwest's bioeconomy talent pipeline.</p>
+              <div class="tag-row">
+                <span class="tag">Open House</span>
+                <span class="tag tag--navy">Students</span>
+                <span class="tag tag--grey">Academia</span>
+              </div>
+            </div>
+            <div class="event__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Indianapolis, Indiana
+            </div>
+            <div class="event__cta">
+              <a class="link-arrow" href="/initiatives.html#heartland-bioworks">Details <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Event 3 -->
+          <article class="event" data-audience="industry" data-location="virtual">
+            <div class="event__date">
+              <span class="m">Sep</span><span class="d">10</span><span class="y">2026</span>
+            </div>
+            <div class="event__body">
+              <h3>RAM Vendor Onboarding Workshop</h3>
+              <p>A hands-on virtual workshop walking vendors through the Rapid Acquisition Marketplace from registration to awardable outcomes.</p>
+              <div class="tag-row">
+                <span class="tag">Workshop</span>
+                <span class="tag tag--navy">Industry</span>
+              </div>
+            </div>
+            <div class="event__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Virtual
+            </div>
+            <div class="event__cta">
+              <a class="btn btn--accent" href="/contact.html">Register</a>
+            </div>
+          </article>
+
+          <!-- Event 4 -->
+          <article class="event" data-audience="industry government" data-location="midwest">
+            <div class="event__date">
+              <span class="m">Oct</span><span class="d">22</span><span class="y">2026</span>
+            </div>
+            <div class="event__body">
+              <h3>Silicon Crossroads Industry Day</h3>
+              <p>An in-person industry day connecting microelectronics suppliers, primes, and government partners across the regional industrial base.</p>
+              <div class="tag-row">
+                <span class="tag">Industry Day</span>
+                <span class="tag tag--navy">Industry</span>
+                <span class="tag tag--grey">Government</span>
+              </div>
+            </div>
+            <div class="event__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              West Lafayette, Indiana
+            </div>
+            <div class="event__cta">
+              <a class="link-arrow" href="/initiatives.html#silicon-crossroads">Details <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Event 5 -->
+          <article class="event" data-audience="industry academia students" data-location="midwest national">
+            <div class="event__date">
+              <span class="m">Nov</span><span class="d">12</span><span class="y">2026</span>
+            </div>
+            <div class="event__body">
+              <h3>SciTechCONNECT Innovator Mixer</h3>
+              <p>An evening mixer bringing together startups, researchers, and investors from across the Midwest innovation ecosystem.</p>
+              <div class="tag-row">
+                <span class="tag">Networking</span>
+                <span class="tag tag--navy">Academia</span>
+                <span class="tag tag--grey">Students</span>
+              </div>
+            </div>
+            <div class="event__loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Indianapolis, Indiana
+            </div>
+            <div class="event__cta">
+              <a class="btn btn--accent" href="/contact.html">Register</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PAST EVENTS ARCHIVE ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Archive</span>
+          <h2>Past events</h2>
+          <p>Recaps and highlights from recent ARI convenings across the ecosystem.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="tag-row"><span class="tag tag--grey">2025</span></div>
+            <h3 class="mt-2">MDIS 2025 Recap</h3>
+            <p>Highlights from the Midwest Defense Innovation Summit—keynotes, capability showcases, and partner outcomes.</p>
+            <a class="link-arrow" href="#">View recap <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <div class="tag-row"><span class="tag tag--grey">2025</span></div>
+            <h3 class="mt-2">Heartland BioWorks Launch</h3>
+            <p>A look back at the launch event marking the start of the Midwest's biomanufacturing workforce initiative.</p>
+            <a class="link-arrow" href="#">View recap <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="card reveal">
+            <div class="tag-row"><span class="tag tag--grey">2024</span></div>
+            <h3 class="mt-2">Tradewinds Industry Briefing</h3>
+            <p>Recap of the briefing introducing vendors to the Tradewinds pathway into the CDAO ecosystem.</p>
+            <a class="link-arrow" href="#">View recap <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PARTNER CTA ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Want to host an event or convene with ARI?</h2>
+          <p>From flagship summits to focused workshops, ARI brings the right partners to the table. Propose an event or explore the initiatives behind our convenings.</p>
+          <div class="btn-row btn-row--center">
+            <a class="btn btn--accent btn--lg" href="/contact.html">Propose an event</a>
+            <a class="btn btn--on-dark btn--lg" href="/initiatives.html">Explore initiatives</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark">ARI</span>
+          <p>The Applied Research Institute unites government, industry, and academia to accelerate mission-driven innovation. Rooted in Indiana, trusted across the nation.</p>
+          <div class="footer-social">
+            <a href="https://x.com/ari" aria-label="ARI on X" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.linkedin.com/company/applied-research-institute" aria-label="ARI on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.59 21 11.1 21 14.16V21h-4v-6.06c0-1.45-.03-3.3-2-3.3-2 0-2.31 1.57-2.31 3.2V21H9z"/></svg></a>
+            <a href="https://www.youtube.com/@ari" aria-label="ARI on YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about.html">About</a>
+          <a href="/initiatives.html">Initiatives</a>
+          <a href="/markets.html">Markets &amp; Capabilities</a>
+          <a href="/impact.html">Impact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Engage</h4>
+          <a href="/insights.html">Insights</a>
+          <a href="/events.html">Events</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/contact.html#partner">Partner With ARI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://maps.google.com/?q=16+Tech+Innovation+District+Indianapolis" rel="noopener">16 Tech Innovation District<br />Indianapolis, Indiana</a>
+          <a href="mailto:info@theari.us">info@theari.us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Applied Research Institute. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <a href="/policies/privacy.html">Privacy Policy</a>
+          <a href="/policies/cookie.html">Cookie Policy</a>
+          <a href="/policies/terms.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+
+  <!-- Progressive-enhancement: filter events by audience/location chips -->
+  <script>
+    (function () {
+      var toolbar = document.querySelector('.events-toolbar');
+      var list = document.getElementById('event-list');
+      if (!toolbar || !list) return;
+
+      var events = Array.prototype.slice.call(list.querySelectorAll('.event'));
+      var state = { audience: 'all', location: 'all' };
+
+      function apply() {
+        events.forEach(function (ev) {
+          var aud = (ev.getAttribute('data-audience') || '').split(/\s+/);
+          var loc = (ev.getAttribute('data-location') || '').split(/\s+/);
+          var audOk = state.audience === 'all' || aud.indexOf(state.audience) !== -1;
+          var locOk = state.location === 'all' || loc.indexOf(state.location) !== -1;
+          ev.hidden = !(audOk && locOk);
+        });
+      }
+
+      toolbar.addEventListener('click', function (e) {
+        var btn = e.target.closest('.chip');
+        if (!btn) return;
+        var group = btn.closest('[data-filter]');
+        if (!group) return;
+        var dim = group.getAttribute('data-filter');
+        // visually toggle within group
+        group.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        if (dim === 'audience' || dim === 'location') {
+          state[dim] = btn.getAttribute('data-value');
+          apply();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
