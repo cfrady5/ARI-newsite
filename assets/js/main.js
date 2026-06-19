@@ -12,6 +12,42 @@
 
   var body = document.body;
 
+  /* ----- Sticky header: add presence once scrolled ------------------------- */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ----- Animated network hero background (motion borrowed from RAM) -------
+     Injected here (not in HTML) so it stays DRY across every page and degrades
+     gracefully: no-JS users and crawlers just see the gradient hero.          */
+  var heroBgMarkup =
+    '<div class="grid-overlay"></div>' +
+    '<svg class="hero-paths" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">' +
+      '<path class="flow-path" d="M-50 470 C 250 450, 350 300, 600 285 S 1000 175, 1260 135" stroke="#4EC06B" stroke-opacity="0.55" stroke-width="1.8"/>' +
+      '<path class="flow-path flow-delay-1" d="M-50 540 C 300 530, 420 380, 650 360 S 1050 250, 1260 220" stroke="#3BAE48" stroke-opacity="0.4" stroke-width="1.4"/>' +
+      '<path class="flow-path flow-delay-2" d="M-50 410 C 220 395, 380 235, 620 225 S 980 115, 1260 70" stroke="#8FB0D8" stroke-opacity="0.45" stroke-width="1.2"/>' +
+      '<path class="flow-path flow-delay-1" d="M-50 250 C 260 240, 430 140, 680 150 S 1040 230, 1260 250" stroke="#4EC06B" stroke-opacity="0.3" stroke-width="1.1"/>' +
+      '<path class="flow-path flow-delay-2" d="M-50 330 C 300 340, 520 470, 760 450 S 1080 360, 1260 380" stroke="#8FB0D8" stroke-opacity="0.28" stroke-width="1"/>' +
+      '<circle class="flow-node" cx="600" cy="285" r="4.5" fill="#4EC06B"/>' +
+      '<circle class="flow-node flow-delay-1" cx="650" cy="360" r="3.5" fill="#3BAE48"/>' +
+      '<circle class="flow-node flow-delay-2" cx="620" cy="225" r="3.5" fill="#8FB0D8"/>' +
+      '<circle class="flow-node flow-delay-1" cx="680" cy="150" r="3" fill="#4EC06B"/>' +
+      '<circle class="flow-node" cx="760" cy="450" r="3" fill="#8FB0D8"/>' +
+    '</svg>';
+  document.querySelectorAll(".hero, .hero--page").forEach(function (hero) {
+    if (hero.querySelector(".hero-bg")) return;
+    var bg = document.createElement("div");
+    bg.className = "hero-bg";
+    bg.setAttribute("aria-hidden", "true");
+    bg.innerHTML = heroBgMarkup;
+    hero.insertBefore(bg, hero.firstChild);
+  });
+
   /* ----- Mobile nav -------------------------------------------------------- */
   var toggle = document.querySelector(".nav-toggle");
   var menu = document.querySelector(".nav-menu");
