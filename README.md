@@ -6,7 +6,7 @@ real, crawlable HTML (no text baked into images), semantic markup, accessible pa
 and a shared design system — so it previews instantly today and maps cleanly onto **Wix**
 (sections + CMS collections) tomorrow.
 
-> **Tagline:** *“Because the warfighter can't wait.”*
+> **Tagline:** *“Because the Warfighter Can't Wait.”*
 > **Mission:** *We catalyze opportunities that enhance national security and drive economic prosperity.*
 
 ---
